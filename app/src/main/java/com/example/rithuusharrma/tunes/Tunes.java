@@ -34,9 +34,9 @@ public class Tunes extends AppCompatActivity {
             permission = checkStoragePermission();
         }
         else
-            display();
+            displayToListView();
         if(permission){
-            display();
+            displayToListView();
         }
     }
 
@@ -58,12 +58,11 @@ public class Tunes extends AppCompatActivity {
             return at;
         }
 
-    void display(){
+    void displayToListView(){
 
         final ArrayList<File> mySongs = findSong(Environment.getExternalStorageDirectory());
         items = new String[ mySongs.size() ];
         for(int i=0;i<mySongs.size();i++){
-            //toast(mySongs.get(i).getName().toString());
             items[i] = mySongs.get(i).getName().toString().replace(".mp3","").replace(".wav","");
         }
         ArrayAdapter<String> adp = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,items);
@@ -89,7 +88,7 @@ public class Tunes extends AppCompatActivity {
     }
     void handleExternalStorageState() {
         if(mExternalStorageAvailable){
-            display();
+            displayToListView();
         }
         else{
             Toast.makeText(getApplicationContext(),"Please insert an SDcard",Toast.LENGTH_LONG).show();
