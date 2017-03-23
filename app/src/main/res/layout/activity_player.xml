@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rithuusharrma.tunes.PlayerActivity">
+
+    <SeekBar
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp" />
+
+    <Button
+        android:text="@string/pause"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/pause"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:text="@string/next"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/next"
+        android:layout_alignBaseline="@+id/forward"
+        android:layout_alignBottom="@+id/forward"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:text="@string/prev"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/previous"
+        android:layout_alignBaseline="@+id/reverse"
+        android:layout_alignBottom="@+id/reverse"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:text="@string/back"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/reverse"
+        android:layout_alignBaseline="@+id/pause"
+        android:layout_alignBottom="@+id/pause"
+        android:layout_toRightOf="@+id/previous"
+        android:layout_toEndOf="@+id/previous"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:text="@string/forward"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/forward"
+        android:layout_alignBaseline="@+id/pause"
+        android:layout_alignBottom="@+id/pause"
+        android:layout_toLeftOf="@+id/next"
+        android:layout_toStartOf="@+id/next"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp" />
+</RelativeLayout>

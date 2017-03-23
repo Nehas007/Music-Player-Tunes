@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Tunes</string>
+    <string name="pause">||</string>
+    <string name="prev">|&lt;&lt;</string>
+    <string name="next">&gt;&gt;|</string>
+    <string name="forward">&gt;&gt;</string>
+    <string name="back">&lt;&lt;</string>
+</resources>
